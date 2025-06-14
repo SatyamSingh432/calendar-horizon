@@ -35,7 +35,7 @@ function App() {
     setShowModal(false);
   };
   return (
-    <div>
+    <div className="max-w-5xl mx-auto px-4 py-6">
       <CalenderHeader
         currentMonth={currentMonth}
         onPrev={() => setCurrentMonth(subMonths(currentMonth, 1))}

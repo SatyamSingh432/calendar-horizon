@@ -21,8 +21,9 @@ function CalendarCells({ currentMonth, events, onDateClick }) {
   while (day <= endDate) {
     for (let i = 0; i < 7; i++) {
       const formatted = format(day, "yyyy-MM-dd");
+      const cloneDay = new Date(day);
       const dayEvents = events.filter(
-        (e) => (e?.date, "yyyy-MM-dd") === formatted
+        (e) => format(e?.date, "yyyy-MM-dd") === formatted
       );
       console.log(dayEvents);
       const isToday = isSameDay(day, new Date());
@@ -31,7 +32,7 @@ function CalendarCells({ currentMonth, events, onDateClick }) {
         <div
           key={day.toString()}
           onClick={() => {
-            onDateClick(day);
+            onDateClick(cloneDay);
           }}
           className={`h-28 p-2 rounded-xl flex flex-col justify-start border cursor-pointer
            
