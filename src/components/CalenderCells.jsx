@@ -8,17 +8,11 @@ import {
   isSameDay,
 } from "date-fns";
 
-function CalendarCells({ currentMonth }) {
+function CalendarCells({ currentMonth, onDateClick }) {
   const monthStart = startOfMonth(currentMonth);
-  console.log(monthStart);
   const monthEnd = endOfMonth(monthStart);
-  console.log(monthEnd);
-
   const startDate = startOfWeek(monthStart);
-  console.log(startDate);
-
   const endDate = endOfWeek(monthEnd);
-  console.log(endDate);
 
   const rows = [];
   let days = [];
@@ -30,6 +24,9 @@ function CalendarCells({ currentMonth }) {
       days.push(
         <div
           key={day.toString()}
+          onClick={() => {
+            onDateClick();
+          }}
           className={`h-28 p-2 rounded-xl flex flex-col justify-start border cursor-pointer
            
             ${
