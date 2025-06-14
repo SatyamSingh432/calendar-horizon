@@ -16,6 +16,7 @@ A simple and elegant calendar application built with React and Tailwind CSS. Use
 ---
 
 ## 📸 Screenshot
+<img width="1426" alt="Screenshot 2025-06-14 at 11 42 23 AM" src="https://github.com/user-attachments/assets/e60b9d64-9e1d-4bf3-bf6d-1bc41f9f96b6" />
 
 ---
 
